@@ -1,0 +1,148 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[a4paper]{article}
+
+\usepackage{color}
+\usepackage{url}
+\usepackage[T2A]{fontenc} % enable Cyrillic fonts
+\usepackage[utf8]{inputenc} % make weird characters work
+\usepackage{graphicx}
+
+\usepackage[english,serbian]{babel}
+%\usepackage[english,serbianc]{babel} %ukljuciti babel sa ovim opcijama, umesto gornjim, ukoliko se koristi cirilica
+
+\usepackage[unicode]{hyperref}
+\hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
+
+\usepackage{listings}
+
+%\newtheorem{primer}{Пример}[section] %ćirilični primer
+\newtheorem{primer}{Primer}[section]
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ 
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\scriptsize\ttfamily,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  firstnumber=1000,                % start line enumeration with line 1000
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Python,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+\begin{document}
+
+\title{Etički problemi u veštačkoj inteligenciji\\ \small{Seminarski rad u okviru kursa\\Metodologija stručnog i naučnog rada\\ Matematički fakultet}}
+
+\author{Vukan Antić, Katarina Dimitrijević, Mirjana Jočović, Aleksandar Šarbajić \\ adresa_1, adresa_2, adresa_3, adresa_4}
+
+%\date{9.~april 2015.}
+
+\maketitle
+
+\abstract{
+U ovom tekstu je ukratko prikazana osnovna forma seminarskog rada. Obratite pažnju da je pored ove .pdf datoteke, u prilogu i odgovarajuća .tex datoteka,
+ kao i .bib datoteka korišćena za generisanje literature. Na prvoj strani seminarskog rada su naslov, apstrakt i sadržaj, i to sve mora da stane na prvu 
+ 
+\tableofcontents
+
+\newpage
+
+%\section{Uvod}
+%\label{sec:uvod}
+%
+%Kada budete predavali seminarski rad, imenujete datoteke tako da sadrže redni broj teme, temu seminarskog rada, kao i prezimena č
+%lanova grupe. Precizna uputstva na temu imenovnja će biti data na formi za predaju seminarskog rada. Predaja seminarskih radova biće 
+%isključivo preko veb forme, a NE slanjem mejla. Link na formu će biti dat u okviru obaveštenja na strani kursa. Vodite računa da prilik
+%om predavanja seminarskog rada predate samo one fajlove koji su neophodni za ponovno generisanje pdf datoteke. To znači da pomoćne fajlo
+%ve, kao što su .log, .out, .blg, .toc, .aux i slično, \textbf{ne treba predavati}.
+
+\section{Veštačke inteligencije i društvene mreže}
+\label{sec:preporučivanje}
+
+Jedna od najvećih primena veštačke inteligencije koju možemo da vidimo u svakodnevnom životu jeste u oblasti društvenim mrežama. Svaka društvena mreža koristi različite algoritme iz veštačke inteligencije, i nad različitim problemima,
+ali cilj je skoro uvek isti - da korisnik provede što više vremena na platformi, da bi kompanija mogla što više da zaradi.
+% Ako treba prostora, izbrisi ovu recenicu Kompanije....
+Kompanije koriste različite metode da bi privukle pažnju i vreme korisnika. Većina koristi \emph{sisteme preoporučivanja}.
+%\begin{primer}
+   % \textbf{Snapchat}, društvena mreža gde korisnici šalju jedni drugima slike iz svojih svakodnevnih života, daje inicijativnu korisnicima da svakodnevno šalju prijateljima slike preko platforme, tako što će biti nagrađeni sa " Snapstreak", koji predstavlja broj dana koliko ste Vi i Vaš prijatelj svakodnevno slali jedno drugom fotografije. Ako bi se desilo da neko od Vas dvoje ne pošalje fotografiju, vaš niz bi se izgubio, i morali biste da nastavite ispočetka. Iako deluje trivijalno, statistika da je najduži "Snapstreak" dug 2663 dana, govori dosta o tome koliko se ljudi trude oko ovih brojki.
+%\end{primer}
+% jos nesto, neki kao prelaz
+\subsection{Sistemi preporuka}
+Sistemi preporuka funkcionišu po jednostavnom principu. Društvene mreže sakupljaju podatke o korisniku, kao što su njegove preference i zanimanja, i na osnovu istih, prikazuju mu sadržaj koji bi mu se dopao. Samim tim, korisnik provede više vremena na platformi.
+\subsubsection{YouTube}
+\textbf{YouTube} je jedna od najpopularnijih društvenih mreža, koja se bavi redistribucijom video sadržaja. Naime, na njoj korisnik može da pretrežuje i gleda video sadržaj drugih korisnika. Pored toga, postoji sistem za preporučivanje sadržaja, koji je zamišljen da korisniku prikaže video koji bi mu se dopao. Algoritam za preporuku funkcioniše tako što analizira preference korisnika, i povezuje ih sa videom koji zadovoljava neke određene kriterijume, što može dovesti do problematičnih situacija.  
+\newline
+Jedan od većih problema koja je platforma skorije doživela vezana je za YouTube Kids. YouTube Kids je specijalana sekcija platforme, koja je zasnovana na sadržaju za decu mlađu od 12 godina. Na njemu deca mogu da nađu bilo kakav sadržaj koji bi trebalo da bude prikladan. Popularnost sekcije oslikava to što je najpregledaniji video klip na celokupnoj platformi pesma za decu 'Baby Shark Dance' sa 11.64 milijardi pregleda. Kao što se može pretpostaviti, tipovi videa koji su najdominantniji u ovom delu platforme predstavljaju uspavanke i crtani filmovi, ali postoje i popularni trendovi vezani za njih. % hocu da kazem da ima crtanih filmova koji su popularniji od ostalih, isto tako za uspavanke
+\newline
+Na primer, tipovi uspavanka koji prikupe najviše pregleda predstavljaju 'Finger Family Song', uspavanka porodičnog karaktera, gde svaki član peva određeni deo pesme. Iako odrasloj osobi ovakav trend deluje čudan, deca uživaju u ovakvom tipu uspavanki, što govori činjenica da neke od ovih pesama imaju čak 1.2 milijardu pregleda. I sličan je primer Britanski crtani film 'Peppa pig', skoro zagarantovani uspeh na YouTube Kids platformi. Tako da, čim dete pogleda par videa
+vezanih za ovakav tip uspavanki ili crtanih filmova, algoritam će nastaviti da preporučuje sličan sadržaj. Samim tim, sve što ima neke određene ključne reči u svom naslovu, verovatno će biti preporučeno dalje, i dobijati veliki broj pregleda. Kao rezultat svega ovoga, nastali su YouTube profili koji su skroz automatizovali pravljenje video sadržaja koji ispunjavaju određene kriterijume, tj. da imaju popularne uspavanke i crtane filmove u svom sadržaju. Tako su nastali mnogi video klipovi čudnih naziva, i još čudnijeg sadržaja, koji bi mogli da utiču na razvoj dece. Jedan od takvih video klipova koji je naknadno obrisan od strane YouTube-a jeste ' Wrong Heads Disney Wrong Ears Wrong Legs Kids Learn Colors Finger Family 2017 Nursery Rhymes'. Već po samom imenu se vidi automatizovana priroda video klipa, a i njen ekscentričan sadržaj.
+Srećom, kada je bila skrenuta pažnja platformi da se ovakve stvari dešavaju, odmah je ustupilo čišćenje sadržaja koji nije prikladan za decu, ali ostaje pitanje, da li je uspešno izbrisan sav sadržaj koji može da naudi razvoju deteta? % da li da spomenem james bridle-a ovde, jer je njegov post skrenuo pažnju na ovaj problem, ili samo da ga stavim u literaturu?
+\subsubsection{Spotify}
+% trebalo bi spomenuti da su najveci lol
+% ovu recenicu si izbrisao, tacno 2 strane
+% Postoji besplatna verzija aplikacije gde korisnik posle svakih par pesama mora da odsluša reklamu, i plaćena verzija, gde na mesečnom nivou plati usluge aplikacije da bi izbegao reklame, i dosta drugih neprijatnosti koje besplatna verzija donosi.
+\textbf{Spotify} je platforma gde korisnici mogu da slušaju muziku svojih omiljenih izvođača.  Da bi Spotify imao autorska prava da pušta muziku, svaki put kada korisnik posluša pesmu određenog umetnika, Spotify mu plati određenu sumu novca. Naravno, ne dobijaju svi umetnici isto. Što je umetnik u pitanju popularniji, to će više novca tražiti od platforme, što nije u interesu platoformi. 
+\newline
+Pošto Spotify nije jedina platforma za slušanje muzike, kompaniji je bio treban način da postane dominantnija u odnosu na svoje takmičare kao što su AppleMusic, AmazonMusic, GoogleMusic i drugi. Da bi to uradio, Spotify je počeo da nudi svojim korisnicima mogućnost preporuke muzike, tj. da korisnik sazna za neku novu muziku preko algoritma. Uvedene se playlist-e koje su personalizovane za svakog korisnika, gde bi platforma na osnovu korisnikovih prethodno poslušanih pesama, znala šta bi mu se isto svidelo. 
+% https://www.billboard.com/pro/consumers-streaming-music-discovery-music-360/
+Čak 62\% korisnika  je izrazilo da za novu muziku saznaju preko sistema preporuka, a 54\% od porodice i prijatelja. Naravno, ostale platforme su ubrzo isto počele da se fokusiraju na sisteme preporuke, ali do tada je Spotify već postao najpopularniji. 
+\newline
+%https://www.musicbusinessworldwide.com/spotify-is-creating-its-own-recordings-and-putting-them-on-playlists/
+Ovo postaje problematično iz razloga što Spotify može da utiče na to koji će izvođači biti preporučeni, samim tim, imaju moć da biraju popularnost umetnika uz pomoć sistema preporuke. 2017 godine, Music Business Worldwide je objavio listu umetnika koji su bili često preporučeni korisnicima, čija je muzika bila besplatna za korišćenje, samim tim, Spotify ne bi morao da plaća autorska prava. Što je još čudnije, muzičari na toj listi bi imali samo po 1 ili 2 pesme na platformi, kao da su bili kreirani samo sa ovim razlogom. 
+
+ 
+
+%\subsection{Reklame}
+%Pošto su najpopularnije od ovih mreža besplatne za korišćenje, kompanije moraju na drugačije načine da zarade. Naime, društvene mreže su prepune reklama, koje su pe
+\subsection{Zavisnost}
+Kao što je već naglašeno, velike kompanije se konstantno bore za pažnju korisnika. Kao rezultat toga, u prethodnoj deceniji, sve veći broj ljudi boluje od zavisnosti društvenih mreža. Iako nije svaka persona koja koristi društvene mreže zavisnik, već mali procenat, i dalje, ova zavisnost podseća na zavisnost bilo koje druge supstance - otežan prestanak prekomernog korišćenja društvenih mreža, drastičnih promena ponašanja, itd. Pri korišćenju ovih platformi, u mozgu se dešavaju slične hemijske reakcije kao pri klađenju. Svaki put kada osoba dobije neku formu validacije na ovim platformama (npr. 'like' na Facebook-u), luči se dopamin u mozgu, davajući korisniku veliku količinu zadovoljstva, kao da biva nagrađen. Iz tog razloga, veza između upotrebe društvenih mreža i lošeg mentalnog zdravlja se ‚‚ne dovodi u pitanje. Naime, prekomerno korišćenje ovih platformi može da utiče na pogled pojedinca na svet - dolazi do verovanja da su tuđi životi savršeni u poređenju sa njegovim, pošto viđa najbolje isečke tuđih života na društvenim mrežama. Kao posledica toga, osoba može da razvije  psihičke poremećaje kao što su depresija i anksioznost. Istraživanja su pokazala da 27\% dece koje koriste društvene mreže više od 3 sata dnevno imaju ozbiljne probleme sa mentalnim zdravljem.
+\newline 
+% izradi jos
+Iako se zavisnost razvija u manjem procentu korisnika, svakom korisniku može doći do ovih osecanja. Lečenje ove bolesti podrazumeva smanjenje korišćenja ovih platformi, ili celokupne telefonije.
+ 
+% https://www.statista.com/statistics/433871/daily-social-media-usage-worldwide/
+% https://www.addictioncenter.com/drugs/social-media-addiction/
+% slika koliko ljudi vise provode vremena na drustvenim mrezama iz godine u godinu
+%\subsection{Botovi}
+%- twiter => pp se da je oko 10-15 posto korisnika botovi (projekti pojedinaca => sale, korisni dodaci itd, ili sirenje propagande, ili nabijanje platilaca) - ako AI postane zao, bice zbog nas lol (twitter AI nalog postao rasista)
+
+
+
+
+
+%- sistem preporuke da ostanes duze (yt(koliko sada ljudi po danu koriste app), spotify(sisnister sranje spomeni))
+
+%- reklame
+
+%- youtube za decu (baby shark most viewed, primer ovih igracaka itd, ceo artikl, random imena (sto vise kljucnih reci, to vise bice preporuceno nadalje (primer onaj minecraft i sve ostalo)))
+
+%- zavisnost <=> preporucivanje sadrzaja 
+
+%- Yeah. And I don’t mean to be so obtuse about it. YouTube has a hundred engineers who are trying to get the perfect next video to play automatically.
+
+
+%What I mean by that is, we’re only going to have more information about how Nick’s mind works, not less. We’re only going to have more information about what persuades him to stay on the screen. We’re only going to have more ways to scrape his profile and what he posts to find the keywords and topics that matter to him and then mirror back his sentiments about everything he cares about when we sell him ads
+
+\end{document}
