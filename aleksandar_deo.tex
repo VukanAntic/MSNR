@@ -1,0 +1,96 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[a4paper]{article}
+
+\usepackage{color}
+\usepackage{url}
+\usepackage[T2A]{fontenc} % enable Cyrillic fonts
+\usepackage[utf8]{inputenc} % make weird characters work
+\usepackage{graphicx}
+
+\usepackage[english,serbian]{babel}
+%\usepackage[english,serbianc]{babel} %ukljuciti babel sa ovim opcijama, umesto gornjim, ukoliko se koristi cirilica
+
+\usepackage[unicode]{hyperref}
+\hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
+
+\usepackage{listings}
+
+%\newtheorem{primer}{Пример}[section] %ćirilični primer
+\newtheorem{primer}{Primer}[section]
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ 
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\scriptsize\ttfamily,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  firstnumber=1000,                % start line enumeration with line 1000
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Python,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+\begin{document}
+
+\section{AI korišćen u vojne svrhe}
+\label{sec: AI korišćen u vojne svrhe}
+Kako se veštačka inteligencija vremenom razvijala, samim tim i njene sposobnosti, logičan korak je bio razmatrati i upotrebu veštačke inteligencije u vojne svrhe. Naravno, kako je vojska obično usko vezana sa događajima od kojih zavise ljudski životi, brzo je dovedena u pitanje i etičnost upotrebe veštačke inteligencije. Naime, prva stvar koja ljudima pada na pamet su neumorni roboti ubice koji su brži i spretniji od ljudi, ali to naravno nije slučaj u stvarnosti.
+\newline
+\newline
+Kada pričamo o veštačkoj inteligenciji u vojne svrhe moramo pričati i komplikacijama koje otežavaju njenu implementaciju. \textbf{Međunarodno humanitano pravo} ili skraćeno \textbf{IHL} (eng. \textit{International Humanitarian Law}) je međunarodno pravo koje se brine o zaštiti civila i njihovih ljutskih prava u ratnim okolnostima. Ono precizno definiše šta jeste a šta nije dozvoljeno vojskama da rade u toku rata. Iako je njegovo postojanje krucijalno za limitiranje štete i nepotrebnog gubitka života, za programere veštačke inteligencije ono predstavlja još jednu prepreku u razvoju bezbednog etičkog softvera.
+\newline
+\newline
+Iako na prvi pogled može da deluje da veštačka inteligencija unosi samo komplikacije i negativne posledice, pretežno za manje razvijene države koje ne mogu da je priušte, ispostavlja se da to ipak nije uvek slučaj. Kao i kod većine drugih etičkih pitanja problem ima svoje \emph{negativne} i \emph{pozitivne} strane.
+\subsection{Negativne strane vojnog AI}
+\label{subsec: Negativne strane vojnog AI}
+Iako su neumorni roboti ubice element naučne fantastike, to ne znači da vojna veštačka inteligencija nema svoje loše strane. Koncept veštačke inteligencije je relativno nov i veoma kompleksan, što ga čini sklonim greškama, a minimalna greška može imati katastrofalne posledice ne samo po vojnike koji sa tim AI rade, već i po nedužne civile dovoljno nesretne da budu umešani. Glavni problemi ovakvog oblika veštačke inteligencije su problemi \emph{odgovornosti} i \emph{pretprilagođenosti}. 
+
+\subsubsection{Problem odgovornosti}
+\label{subsubsec: Problem odgovornosti}
+Kao što samo ime kaže ovaj problem obuhvata ideju da nije precizno definisano ko snosi posledice onoga što veštačka inteligencija ``samostalno`` uradi.  Ukoliko postoji potpuno autonomni sistem koji krši pravila vođenja borbe (eng. \emph{rules of engagement}) ili međunarodnog humanitarnog prava pitanje je ko je kriv. Ukoliko sistem ispravno radi, da li je kriv samo general koji je izdao nehumana naređenja ili je kriv i programer što nema provere zadovoljenosti IHL? Ako pak sistem radi neispravno da li je kriv programer koji je napravio grešku ili general koji je dozvolio upotrebu nebezbednog sistema? Moguće posledice ovakvih problema nisu zanemarljive zato je veoma važno imati precizno definisanog krivca.
+\newline
+\newline
+Iako problem nije u potpunosti rešiv u slučaju neispravnog softvera, programeri deo ovog problema ublažuju uvođenjem nekog vida ljudske medijacije. Naime sistemi se prave tako da uvek postoji odgovorna osoba koja će u krucijalnim momentima doneti odgovarajuću odluku. Tako npr. automatizovani mitraljezi koji čuvaju određenu teritoriju često automatski daju upozorenje ukoliko neko kroči na tu teritoriju, a pucaju samo ukoliko dobiju odobrenje od zadužene osobe.
+
+\subsubsection{Problem pretprilagođenosti}
+\label{subsubsec: Problem pretprilagođenosti}
+Problem pretprilagođenosti podrazumeva nepredvidivo ponašanje algoritama koji uče na osnovu nekih ulaznih podataka. Problemi ove vrste često dovode do sistema koji često previđa neke krupne detalje koji bi bili očigledni čoveku. Primeri problema koji mogu nastati su pogrešno razlikovanje civila i vojnika (npr. po rasi umesto po uniformi), nerazlikovanje vojnih baza i civilnih naselja, previđanje očiglednih prepreka (npr. kod automatske navigacije) i slično.
+\newline
+\newline
+Za razliku od ljudi, koji su fleksibilni i umeju da se adaptiraju, ovi sistemi sadrže samo nekoliko scenarija na koje znaju da reaguju. Način rešavanja ovog problema je isti kao i kod svih drugih sistema koji uče, a to je adekvatan odabir ulaznih podataka i algoritma za učenje, kao i temeljno testiranje svih potencijalno problematičnih situacija.
+
+\subsection{Pozitivne strane vojnog AI}
+\label{subsec: Pozitivne strane vojnog AI}
+Iako kvalitetna veštačka inteligencija može da doprinosi lakom osvajanju bitaka, to nije nužno pozitivna strana za manje razvijene države koje bi joj se potencijalno suprotstavljale. Ključan deo pozitivne strane pretstavlja koncept \textbf{etičkog oružija}. Etičko oružije je oružije koje je pametno programirano sa svim pravilima i zakonima ratovanja kao što su su pravila vođenja borbe i IHL. Ovakvi sistemi su zasnovani na tehnologijama maksimalno i minimalno pravičnog AI (eng. \textit{maximally just AI} i \textit{minimally just AI}), odnosno \textbf{MaxAI} i \textbf{MinAI}.
+
+\subsubsection{MaxAI i MinAI}
+\label{subsubsec: MaxAI i MinAI}
+Za razliku od proizvoljnih sistema MaxAI i MinAI ne ispunjavaju ``slepo`` naređenja koja su im zadata. Ovi sistemi su programirani da uzimaju u obzir različite okolnosti i zakone i adekvatno sa time ``modifikuju`` naređenja.
+\newline
+\newline
+U slučaju MaxAI ukoliko se primeti da naređenja ne zadovoljavaju zadate zakone, algoritam se trudi da što preciznije prati naređenja uz minimalne izmene. Izmene mogu obuhvatati smanjenje primenjene sile do minimalno neophodne ili odbijanje napadanja zaštićenih objekata poput objekata crvenog krsta, bolnica i slično. MaxAI postoji pretežno u teoriji baš zbog toga što je izuzetno teško uzeti u obzir sve apstraktne parametre i posledice naređenja i ublažiti ih na minimalno neophodne.
+\newline
+\newline
+MinAI obično podrazumeva mnogo jednostavniji sistem sa limitiranim opcijama i ishodima, što ga čini mogućim za implemenitranje za razliku od MaxAI. Naime MinAI obično podrazumeva zadavanje naređenja i ukoliko naređenje krši neke zadate zakone ono se jednostavno ne izvršava. U nekim implementacijama moguće je zadavanje i sekundarnog naređenja (eng. \textit{failsafe}) na čiju se proveru i izvršavanje prelazi ukoliko prvo naređenje nije izvršivo.
+\end{document}
