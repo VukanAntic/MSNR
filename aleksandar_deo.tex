@@ -57,9 +57,7 @@
 \label{sec: AI korišćen u vojne svrhe}
 Kako se veštačka inteligencija vremenom razvijala, samim tim i njene sposobnosti, logičan korak je bio razmatrati i upotrebu veštačke inteligencije u vojne svrhe. Naravno, kako je vojska obično usko vezana sa događajima od kojih zavise ljudski životi, brzo je dovedena u pitanje i etičnost upotrebe veštačke inteligencije. Naime, prva stvar koja ljudima pada na pamet su neumorni roboti ubice koji su brži i spretniji od ljudi, ali to naravno nije slučaj u stvarnosti.
 \newline
-\newline
 Kada pričamo o veštačkoj inteligenciji u vojne svrhe moramo pričati i komplikacijama koje otežavaju njenu implementaciju. \textbf{Međunarodno humanitano pravo} ili skraćeno \textbf{IHL} (eng. \textit{International Humanitarian Law}) je međunarodno pravo koje se brine o zaštiti civila i njihovih ljutskih prava u ratnim okolnostima. Ono precizno definiše šta jeste a šta nije dozvoljeno vojskama da rade u toku rata. Iako je njegovo postojanje krucijalno za limitiranje štete i nepotrebnog gubitka života, za programere veštačke inteligencije ono predstavlja još jednu prepreku u razvoju bezbednog etičkog softvera.
-\newline
 \newline
 Iako na prvi pogled može da deluje da veštačka inteligencija unosi samo komplikacije i negativne posledice, pretežno za manje razvijene države koje ne mogu da je priušte, ispostavlja se da to ipak nije uvek slučaj. Kao i kod većine drugih etičkih pitanja problem ima svoje \emph{negativne} i \emph{pozitivne} strane.
 \subsection{Negativne strane vojnog AI}
@@ -70,13 +68,11 @@ Iako su neumorni roboti ubice element naučne fantastike, to ne znači da vojna 
 \label{subsubsec: Problem odgovornosti}
 Kao što samo ime kaže ovaj problem obuhvata ideju da nije precizno definisano ko snosi posledice onoga što veštačka inteligencija ``samostalno`` uradi.  Ukoliko postoji potpuno autonomni sistem koji krši pravila vođenja borbe (eng. \emph{rules of engagement}) ili međunarodnog humanitarnog prava pitanje je ko je kriv. Ukoliko sistem ispravno radi, da li je kriv samo general koji je izdao nehumana naređenja ili je kriv i programer što nema provere zadovoljenosti IHL? Ako pak sistem radi neispravno da li je kriv programer koji je napravio grešku ili general koji je dozvolio upotrebu nebezbednog sistema? Moguće posledice ovakvih problema nisu zanemarljive zato je veoma važno imati precizno definisanog krivca.
 \newline
-\newline
 Iako problem nije u potpunosti rešiv u slučaju neispravnog softvera, programeri deo ovog problema ublažuju uvođenjem nekog vida ljudske medijacije. Naime sistemi se prave tako da uvek postoji odgovorna osoba koja će u krucijalnim momentima doneti odgovarajuću odluku. Tako npr. automatizovani mitraljezi koji čuvaju određenu teritoriju često automatski daju upozorenje ukoliko neko kroči na tu teritoriju, a pucaju samo ukoliko dobiju odobrenje od zadužene osobe.
 
 \subsubsection{Problem pretprilagođenosti}
 \label{subsubsec: Problem pretprilagođenosti}
 Problem pretprilagođenosti podrazumeva nepredvidivo ponašanje algoritama koji uče na osnovu nekih ulaznih podataka. Problemi ove vrste često dovode do sistema koji često previđa neke krupne detalje koji bi bili očigledni čoveku. Primeri problema koji mogu nastati su pogrešno razlikovanje civila i vojnika (npr. po rasi umesto po uniformi), nerazlikovanje vojnih baza i civilnih naselja, previđanje očiglednih prepreka (npr. kod automatske navigacije) i slično.
-\newline
 \newline
 Za razliku od ljudi, koji su fleksibilni i umeju da se adaptiraju, ovi sistemi sadrže samo nekoliko scenarija na koje znaju da reaguju. Način rešavanja ovog problema je isti kao i kod svih drugih sistema koji uče, a to je adekvatan odabir ulaznih podataka i algoritma za učenje, kao i temeljno testiranje svih potencijalno problematičnih situacija.
 
@@ -88,9 +84,7 @@ Iako kvalitetna veštačka inteligencija može da doprinosi lakom osvajanju bita
 \label{subsubsec: MaxAI i MinAI}
 Za razliku od proizvoljnih sistema MaxAI i MinAI ne ispunjavaju ``slepo`` naređenja koja su im zadata. Ovi sistemi su programirani da uzimaju u obzir različite okolnosti i zakone i adekvatno sa time ``modifikuju`` naređenja.
 \newline
-\newline
 U slučaju MaxAI ukoliko se primeti da naređenja ne zadovoljavaju zadate zakone, algoritam se trudi da što preciznije prati naređenja uz minimalne izmene. Izmene mogu obuhvatati smanjenje primenjene sile do minimalno neophodne ili odbijanje napadanja zaštićenih objekata poput objekata crvenog krsta, bolnica i slično. MaxAI postoji pretežno u teoriji baš zbog toga što je izuzetno teško uzeti u obzir sve apstraktne parametre i posledice naređenja i ublažiti ih na minimalno neophodne.
-\newline
 \newline
 MinAI obično podrazumeva mnogo jednostavniji sistem sa limitiranim opcijama i ishodima, što ga čini mogućim za implemenitranje za razliku od MaxAI. Naime MinAI obično podrazumeva zadavanje naređenja i ukoliko naređenje krši neke zadate zakone ono se jednostavno ne izvršava. U nekim implementacijama moguće je zadavanje i sekundarnog naređenja (eng. \textit{failsafe}) na čiju se proveru i izvršavanje prelazi ukoliko prvo naređenje nije izvršivo.
 \end{document}
